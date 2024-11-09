@@ -12,12 +12,19 @@
 
     <!-- Header Section -->
     <header>
-        <img src="InShot_20230828_181756983 (1).jpg" alt="Yash Raj Singh" class="profile-img">
+        <!-- Profile Image with Zoom Feature -->
+        <img src="InShot_20230828_181756983 (1).jpg" alt="Yash Raj Singh" class="profile-img" onclick="zoomImage()">
         <h1>Yash Raj Singh</h1>
         <p>Sasaram, Bihar | Bachelor of Technology in IT, IIIT Bhubaneswar</p>
         <p>Email: yash13raj.singh@gmail.com | Phone: +91 9693221160</p>
-        <p><a href="https://www.linkedin.com/in/yash-raj-singh-8a9273228" target="_blank">LinkedIn</a> | <a
-                href="https://github.com/SinghYash-Raj" target="_blank">GitHub</a></p>
+        <p>
+            <a href="https://www.linkedin.com/in/yash-raj-singh-8a9273228" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn" class="icon"> LinkedIn
+            </a> |
+            <a href="https://github.com/SinghYash-Raj" target="_blank">
+                <img src="github.png" alt="GitHub" class="icon"> GitHub
+            </a>
+        </p>
     </header>
 
     <!-- About Section -->
@@ -70,15 +77,50 @@
     <section id="profiles">
         <h2>Profile Links</h2>
         <ul>
-            <li><a href="https://leetcode.com/u/Yash_RajSingh/" target="_blank">Leetcode</a></li>
-            <li><a href="https://www.geeksforgeeks.org/user/yash13rah6og/" target="_blank">GeeksforGeeks</a></li>
-            <li><a href="https://github.com/SinghYash-Raj" target="_blank">GitHub</a></li>
+            <li>
+                <a href="https://leetcode.com/u/Yash_RajSingh/" target="_blank">
+                    <img src="leetcode.jpg" alt="LeetCode" class="icon"> LeetCode
+                </a>
+            </li>
+            <li>
+                <a href="https://www.geeksforgeeks.org/user/yash13rah6og/" target="_blank">
+                    <img src="gfg.png" alt="GeeksforGeeks" class="icon"> GeeksforGeeks
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/SinghYash-Raj" target="_blank">
+                    <img src="github.png" alt="GitHub" class="icon"> GitHub
+                </a>
+            </li>
         </ul>
     </section>
 
     <footer>
         <p>© 2024 Yash Raj Singh</p>
     </footer>
+
+    <script>
+        function zoomImage() {
+            const img = document.querySelector('.profile-img');
+            img.classList.toggle('zoomed'); // Toggle zoomed class on image
+
+            // Add or remove event listener on the document
+            if (img.classList.contains('zoomed')) {
+                document.addEventListener('click', resetZoom);
+            } else {
+                document.removeEventListener('click', resetZoom);
+            }
+        }
+
+        function resetZoom(event) {
+            const img = document.querySelector('.profile-img');
+            // Check if click is outside the image
+            if (!img.contains(event.target)) {
+                img.classList.remove('zoomed'); // Remove zoomed class
+                document.removeEventListener('click', resetZoom); // Remove event listener
+            }
+        }
+    </script>
 
 </body>
 
