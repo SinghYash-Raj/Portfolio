@@ -1,39 +1,52 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BASE */
 body {
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     background: #f5f7fb;
     color: #333;
     line-height: 1.6;
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
     text-align: center;
-    padding: 50px 20px;
+    padding: 55px 20px;
     background: linear-gradient(135deg, #1f2933, #111827);
     color: #fff;
 }
 
+/* PROFILE IMAGE */
 .profile-img {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    border: 4px solid #fff;
+    border: 4px solid #ffffff;
     margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* HERO TEXT */
 .subtitle {
     font-size: 1.2rem;
     opacity: 0.9;
+    margin-top: 5px;
 }
 
+/* LINKS */
 .links {
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 .links a {
@@ -41,72 +54,95 @@ body {
     color: #60a5fa;
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.2s ease;
 }
 
 .links a:hover {
+    color: #93c5fd;
     text-decoration: underline;
 }
 
-/* Sections */
+/* SECTIONS */
 section {
     max-width: 900px;
     margin: 30px auto;
-    padding: 25px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
+/* HEADINGS */
 h2 {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     color: #1f2933;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 6px;
 }
 
-/* Cards */
+/* CARDS */
 .card {
     margin-bottom: 20px;
 }
 
 .card h3 {
     color: #111827;
+    margin-bottom: 6px;
 }
 
-/* Skills */
+/* SKILLS */
+.skills {
+    list-style: none;
+}
+
 .skills li {
     margin: 8px 0;
+    padding-left: 18px;
+    position: relative;
 }
 
-/* Footer */
+.skills li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 15px;
     background: #111827;
-    color: #fff;
+    color: #ffffff;
     margin-top: 40px;
+    font-size: 0.95rem;
 }
 
-/* Image Popup Modal */
+/* IMAGE POPUP MODAL */
 .modal {
     display: none;
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.75);
     z-index: 1000;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* MODAL IMAGE */
 .modal-img {
     max-width: 90%;
     max-height: 90%;
-    border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    animation: zoomIn 0.3s ease;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.25s ease;
 }
 
+/* ANIMATION */
 @keyframes zoomIn {
     from {
-        transform: scale(0.8);
+        transform: scale(0.85);
         opacity: 0;
     }
     to {
@@ -115,7 +151,20 @@ footer {
     }
 }
 
-/* Make profile image clickable */
-.profile-img {
-    cursor: pointer;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    section {
+        margin: 20px 15px;
+        padding: 22px;
+    }
+
+    .links a {
+        display: inline-block;
+        margin: 6px;
+    }
 }

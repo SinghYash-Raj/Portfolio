@@ -10,6 +10,7 @@
 
 <body>
 
+    <!-- HERO -->
     <header class="hero">
         <img src="profile.jpg" alt="Yash Raj Singh" class="profile-img" id="profileImg" />
         <h1>Yash Raj Singh</h1>
@@ -23,16 +24,17 @@
         </div>
     </header>
 
+    <!-- ABOUT -->
     <section>
         <h2>About Me</h2>
         <p>
             Trainee Engineer with strong hands-on experience in Salesforce Development and DevOps practices.
             I work on CI/CD pipelines, release automation, cloud deployments, and scalable microservice-based
             applications.
-            Passionate about building reliable systems and improving deployment efficiency.
         </p>
     </section>
 
+    <!-- EXPERIENCE -->
     <section>
         <h2>Experience</h2>
         <div class="card">
@@ -41,11 +43,12 @@
                 • Salesforce Development (Apex, LWC, Flows, Triggers)<br />
                 • Copado DevOps, Git-based deployments<br />
                 • CI/CD pipelines, metadata management<br />
-                • Worked on product-based Salesforce applications
+                • Product-based Salesforce applications
             </p>
         </div>
     </section>
 
+    <!-- SKILLS -->
     <section>
         <h2>Technical Skills</h2>
         <ul class="skills">
@@ -57,14 +60,15 @@
         </ul>
     </section>
 
+    <!-- PROJECTS -->
     <section>
         <h2>Projects</h2>
 
         <div class="card">
             <h3>TicketNexus – Microservices Platform</h3>
             <p>
-                Node.js based microservice architecture using Docker, Kubernetes,
-                JWT authentication, Stripe payments, and NATS Streaming Server.
+                Node.js microservices using Docker, Kubernetes,
+                JWT authentication, Stripe payments, and NATS.
             </p>
             <a href="https://github.com/SinghYash-Raj/TicketNexus" target="_blank">GitHub</a>
         </div>
@@ -72,25 +76,25 @@
         <div class="card">
             <h3>Link-Me-Up – Real-Time Chat App</h3>
             <p>
-                MERN stack chat application with Socket.IO, private & group chats,
+                MERN stack chat app with Socket.IO, private & group chats,
                 authentication, and cloud deployment.
             </p>
             <a href="https://linkup-frontend.vercel.app/" target="_blank">Live Demo</a>
         </div>
-
     </section>
 
+    <!-- CERTIFICATIONS -->
     <section>
         <h2>Certifications</h2>
         <ul>
             <li>Salesforce Certified Platform Developer I</li>
             <li>Copado Certified Fundamentals I</li>
-            <li>AWS Cloud Practitioner (In Progress)</li>
+            <!-- <li>AWS Cloud Practitioner (In Progress)</li> -->
             <li>Microservices with Node.js & React – Udemy</li>
         </ul>
     </section>
 
-
+    <!-- PROBLEM SOLVING -->
     <section>
         <h2>Problem Solving</h2>
         <div class="links">
@@ -103,7 +107,12 @@
         © 2026 Yash Raj Singh
     </footer>
 
-    <!-- Handle image modal -->
+    <!-- IMAGE MODAL -->
+    <div id="imageModal" class="modal">
+        <img src="profile.jpg" class="modal-img" />
+    </div>
+
+    <!-- SCRIPT (MUST BE AT END) -->
     <script>
         const profileImg = document.getElementById("profileImg");
         const modal = document.getElementById("imageModal");
@@ -116,10 +125,6 @@
             modal.style.display = "none";
         });
     </script>
-
-    <div id="imageModal" class="modal">
-        <img src="profile.jpg" class="modal-img" />
-    </div>
 
 </body>
 
