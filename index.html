@@ -2,125 +2,104 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yash Raj Singh | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yash Raj Singh | Salesforce & DevOps Engineer</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <!-- Profile Image with Zoom Feature -->
-        <img src="InShot_20230828_181756983 (1).jpg" alt="Yash Raj Singh" class="profile-img" onclick="zoomImage()">
+    <header class="hero">
+        <img src="profile.jpg" alt="Yash Raj Singh" class="profile-img" />
         <h1>Yash Raj Singh</h1>
-        <p>Sasaram, Bihar | Bachelor of Technology in IT, IIIT Bhubaneswar</p>
-        <p>Email: yash13raj.singh@gmail.com | Phone: +91 9693221160</p>
-        <p>
-            <a href="https://www.linkedin.com/in/yash-raj-singh-8a9273228" target="_blank">
-                <img src="linkedin.png" alt="LinkedIn" class="icon"> LinkedIn
-            </a> |
-            <a href="https://github.com/SinghYash-Raj" target="_blank">
-                <img src="github.png" alt="GitHub" class="icon"> GitHub
-            </a>
-        </p>
+        <p class="subtitle">Salesforce Developer | DevOps Engineer</p>
+        <p>Sasaram, Bihar • India</p>
+
+        <div class="links">
+            <a href="mailto:yash13raj.singh@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/yash-raj-singh-8a9273228" target="_blank">LinkedIn</a>
+            <a href="https://github.com/SinghYash-Raj" target="_blank">GitHub</a>
+        </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
+    <section>
         <h2>About Me</h2>
-        <p>I'm a web developer and competitive programmer, passionate about building scalable applications. Currently
-            pursuing my B.Tech in Information Technology at IIIT Bhubaneswar.</p>
+        <p>
+            Trainee Engineer with strong hands-on experience in Salesforce Development and DevOps practices.
+            I work on CI/CD pipelines, release automation, cloud deployments, and scalable microservice-based
+            applications.
+            Passionate about building reliable systems and improving deployment efficiency.
+        </p>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <section>
+        <h2>Experience</h2>
+        <div class="card">
+            <h3>Trainee Engineer – Rhythm Innovations</h3>
+            <p>
+                • Salesforce Development (Apex, LWC, Flows)<br />
+                • Copado DevOps, Git-based deployments<br />
+                • CI/CD pipelines, metadata management<br />
+                • Worked on product-based Salesforce applications
+            </p>
+        </div>
+    </section>
+
+    <section>
         <h2>Technical Skills</h2>
-        <ul>
-            <li>Languages: C, C++, HTML/CSS, JavaScript, TypeScript, SQL</li>
-            <li>Technologies/Frameworks: NodeJS, Express.js, MongoDB, ReactJS</li>
-            <li>Coursework: Data Structures, Algorithms, OOP, Operating System, DBMS</li>
+        <ul class="skills">
+            <li>Salesforce: Apex, LWC, Flows, SOQL</li>
+            <li>DevOps: Git, Jenkins, Copado, GitHub Actions</li>
+            <li>Cloud: AWS (EC2, S3, IAM, CloudWatch)</li>
+            <li>Containers: Docker, Kubernetes</li>
+            <li>Backend: Node.js, Express, MongoDB</li>
         </ul>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <section>
         <h2>Projects</h2>
 
-        <div class="project">
-            <h3>Link-Me-Up</h3>
-            <p>MERN stack real-time chat app with Socket.IO, featuring group/private chat, JWT-based authentication, and
-                Vercel/Render deployment.</p>
-            <a href="https://github.com/SinghYash-Raj/Link-Me-Up.git" target="_blank">GitHub</a> | <a
-                href="https://linkup-frontend.vercel.app/" target="_blank">Live Demo</a>
+        <div class="card">
+            <h3>TicketNexus – Microservices Platform</h3>
+            <p>
+                Node.js based microservice architecture using Docker, Kubernetes,
+                JWT authentication, Stripe payments, and NATS Streaming Server.
+            </p>
+            <a href="https://github.com/SinghYash-Raj/TicketNexus" target="_blank">GitHub</a>
         </div>
 
-        <div class="project">
-            <h3>TicketNexus</h3>
-            <p>Microservice-based ticketing app with Node.js, Express, JWT authentication, Stripe integration, Docker,
-                Kubernetes, and NATS Streaming Server.</p>
-            <a href="https://github.com/SinghYash-Raj/TicketNexus.git" target="_blank">GitHub</a>
+        <div class="card">
+            <h3>Link-Me-Up – Real-Time Chat App</h3>
+            <p>
+                MERN stack chat application with Socket.IO, private & group chats,
+                authentication, and cloud deployment.
+            </p>
+            <a href="https://linkup-frontend.vercel.app/" target="_blank">Live Demo</a>
         </div>
+
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications">
+    <section>
         <h2>Certifications</h2>
         <ul>
-            <li>Microservices with Node.js and React (Udemy)</li>
-            <li>Web Development Bootcamp (Udemy)</li>
+            <li>Copado Certified Fundamentals I</li>
+            <li>AWS Cloud Practitioner (In Progress)</li>
+            <li>Microservices with Node.js & React – Udemy</li>
         </ul>
     </section>
 
-    <!-- Profiles Section -->
-    <section id="profiles">
-        <h2>Profile Links</h2>
-        <ul>
-            <li>
-                <a href="https://leetcode.com/u/Yash_RajSingh/" target="_blank">
-                    <img src="leetcode.jpg" alt="LeetCode" class="icon"> LeetCode
-                </a>
-            </li>
-            <li>
-                <a href="https://www.geeksforgeeks.org/user/yash13rah6og/" target="_blank">
-                    <img src="gfg.png" alt="GeeksforGeeks" class="icon"> GeeksforGeeks
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/SinghYash-Raj" target="_blank">
-                    <img src="github.png" alt="GitHub" class="icon"> GitHub
-                </a>
-            </li>
-        </ul>
+    <section>
+        <h2>Problem Solving</h2>
+        <div class="links">
+            <a href="https://leetcode.com/u/Yash_RajSingh/" target="_blank">LeetCode</a>
+            <a href="https://www.geeksforgeeks.org/user/yash13rah6og/" target="_blank">GeeksforGeeks</a>
+        </div>
     </section>
 
     <footer>
-        <p>© 2024 Yash Raj Singh</p>
+        © 2026 Yash Raj Singh
     </footer>
-
-    <script>
-        function zoomImage() {
-            const img = document.querySelector('.profile-img');
-            img.classList.toggle('zoomed'); // Toggle zoomed class on image
-
-            // Add or remove event listener on the document
-            if (img.classList.contains('zoomed')) {
-                document.addEventListener('click', resetZoom);
-            } else {
-                document.removeEventListener('click', resetZoom);
-            }
-        }
-
-        function resetZoom(event) {
-            const img = document.querySelector('.profile-img');
-            // Check if click is outside the image
-            if (!img.contains(event.target)) {
-                img.classList.remove('zoomed'); // Remove zoomed class
-                document.removeEventListener('click', resetZoom); // Remove event listener
-            }
-        }
-    </script>
 
 </body>
 
